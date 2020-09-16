@@ -1,0 +1,87 @@
+body{
+  background-color: #000;
+  color: rgb(20, 0, 53);
+  font-family: 'Mali', cursive;
+  font-size: 62.5%;
+  font-style: Arial;
+}
+#logo{
+  width: 100%;
+  height: 60px;
+  top: 0;
+  padding: 5px;
+  position: fixed;
+  font-size: 28px;
+  text-align: center;
+  z-index: 999;
+  background-color: rgb(20, 9, 70);
+}
+
+  .animation-box {
+    width: 75%;
+    height: 27.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .animation-container {
+    width: 1000rem;
+    height: 30rem;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+  
+    45% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0%;
+    }
+  }
+  .one-text {
+    font-size: 3.4rem;
+    position: absolute;
+    opacity: 0;
+    color: #F0A3BE;
+    animation-name: fadeInOut;
+    animation-delay: 2s;
+    animation-duration: 9s;
+  }
+
+  .two-text {
+    font-size: 3.4rem;
+    position: absolute;
+    opacity: 0;
+    color: #F0A3BE;
+    animation-name: fadeInOut;
+    animation-delay: 10.5s;
+    animation-duration: 9s;
+  }
+  
+  .three-text {
+    font-size: 3.4rem;
+    position: absolute;
+    opacity: 0;
+    color: #F0A3BE;
+    animation-name: fadeInOut;
+    animation-delay: 19.5s;
+    animation-duration: 9s;
+  }
+
+  .fourth-text {
+    font-size: 3.4rem;
+    position: absolute;
+    opacity: 0;
+    color: #F0A3BE;
+    animation-name: fadeInOut;
+    animation-delay: 28.5s;
+    animation-duration: 9s;
+  }
