@@ -15,13 +15,16 @@
 </head>
 
 <body>
-  <!-- ไว้ใส่ logo เฉยๆ -->
+  <!-- ไว้ใส่ logo เฉยๆ  -->
   <div id="logo">The Real Zodiac(Logo)</div>
   <!-- เนื้อหา -->
   <div id="wrapper">
-    <div class="section" style="background-image: url('img/bg_1.png'); background-size: 100% 100%;">
+    <div class="section" style="background-color: black;">
       <!-- ข้อมูลแต่ละราศี -->
-      <div class="slide">
+      <div class="cycle" id="cycle">
+        <img src="img/zodiac_cycle.png" style="width: 1800px; height: 1150px;">
+      </div>
+      <div class="slide" style="padding: 20 400;"> 
         <div class="info row">
           <div class="col-4" style="width: 300px; height: 300px; background-color: rgb(12, 6, 70); border-radius: 50%;">
             <img src="img/zodiac_signs/aries.png"
@@ -30,7 +33,7 @@
           <div class="col-1"></div>
           <div class="text col">
             <div class="zodiac">Aries <a>ราศีเมษ</a></div>
-            <p>
+            <p style="opacity: 100%;">
               กลุ่มดาวแกะประจำราศีเมษจุดสังเกตของกลุ่มดาวนี้ก็คือ
               จะมีดาวที่สว่างจ้าสามารถมองเห็นได้อย่างชัดเจนอยู่ 3 ดวง
               และมีรูปร่างคล้ายกับสามเหลี่ยมมุมป้าน แต่กลุ่มกาวแกะนั่นจะ
@@ -282,6 +285,12 @@
       autoScrolling: true,
       slidesNavigation: true
     });
+    var num = 0
+    function rotate(){
+        num += 10
+        rot = "rotate("+num+"deg)"
+        document.getElementById("cycle").style.transform = rot;
+    }
   </script>
 </body>
 
