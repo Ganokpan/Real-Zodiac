@@ -1,99 +1,158 @@
-body{
-    background-color: #000;
-    color: rgb(20, 0, 53);
-    font-family: 'Mali', cursive;
-}
-.info{
-    width: 60vw;
-    padding: 20px;
-    margin: auto;
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
-}
-.cycle{
-  position: absolute;
-  overflow: hidden;
-  margin-left: -60vw;
-  margin-top: -32ch;
-  top: 0;
-  /*-webkit-animation: spin 15s linear infinite;*/
+/* Title font */
+@font-face {
+  font-family: redMoonRising;
+  src: url("../font/Red_Moon_Rising.otf");
 }
 
-/*@-webkit-keyframes spin{
-  100%{-webkit-transform: rotate(360deg);}
-}*/
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  font-family: 'Prompt', sans-serif;
+  color: hsl(0, 50%, 100%);
+  background: url("../img/bg_2.png");
+}
 
 .zodiac{
-    font-size: 64px;
-    background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin: 200px 0 200px 0;
 }
-.zodiac a{
-    font-size: 32px;
+
+.info{
+  width: 1000px;
+  height: 70vh;
+  position: absolute;
+  left: 50%;
+  margin-left: -500px;
+  top: 50%;
+  margin-top: -40vh;
 }
-#logo{
-    width: 100%;
+.image{
+  /* 400*505 px */
+  width: 40%;
+  height: 100%;
+  background: red;
+  margin-right: 100px;
+  float: left;
+}
+.text{
+  width: 50%;
+  float: left;
+  margin: auto;
+  padding: auto;
+  right: 0;
+
+}
+.name{
+  font-family: redMoonRising;
+  font-size: 64px;
+  font-weight: bolder;
+}
+.name a{
+  font-family: 'Prompt', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+}
+.day_range{
+  font-size: 24px;
+}
+/* Parallax */
+.title{
+  font-family: redMoonRising;
+  font-size: 120px;
+  text-align: center;
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  margin-left: -40%;
+  padding: 30px;
+}
+.zoom{
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  overflow: hidden;
+  background: url("../img/bg_1.png");
+  background-size: cover;
+}
+.zoom::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 100;
+  background: linear-gradient(transparent, #000);
+}
+.paraleft{
+  position: absolute;
+  width: 100%;
+}
+.pararight{
+  position: absolute;
+  width: 100%;
+  right: 0;
+}
+/* Parallax end here*/
+
+/* The void */
+.void{
+  width: 100%;
+  height: 2000px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+/* The void end here */
+
+/* mouse scrolling animation */
+.icon-scroll,
+.icon-scroll:before {
+    position: absolute;
+    left: 50%
+}
+.icon-scroll {
+    width: 30px;
     height: 50px;
-    top: 0;
-    padding: 10px;
-    position: fixed;
-    font-size: 20px;
-    color: #eee;
-    text-align: center;
-    z-index: 999;
-    background-color: rgb(0, 0, 0);
+    border: 2px solid #fff;
+    border-radius: 25px
 }
-
-.fp-slidesNav ul li a span {
-    background: rgb(255, 244, 91);
+@media (max-width: 767px) {
+    .icon-scroll {
+        position: relative
+    }
 }
-@keyframes fadeIn { 
-    from { opacity: 0; } 
-  }
-  
-.animate-flicker {
-    animation: fadeIn 2s infinite alternate;
-    width: 75%;
-    height: 27.5rem;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
-    color: rgb(247, 241, 241);
-  }
-  input.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    width: 80vw;
-    margin: 0 auto;
-    min-height: 100vh;
-  }
-  input.btn {
-    flex: 1 1 auto;
-    margin: auto;
-    padding: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: rgb(8, 8, 8);
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    display: block;
-    margin: auto;
-    font-size: 2.4rem;
-    font-weight: bold;
-   }
-  
-  input.btn:hover {
-    background-position: right center; /* change the direction of the change here */
-  }
+.icon-scroll:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll
+}
+@keyframes scroll {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(26px)
+    }
+}
+/* mouse scrolling animation end here */
 
-.btn-2 {
-  background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+hr {
+  border: 0;
+  height: 3px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
