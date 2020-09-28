@@ -1,11 +1,10 @@
 body{
   background-color: #000;
-  color: rgb(20, 0, 53);
+  /* color: rgb(20, 0, 53); */
   font-family: 'Mali', cursive;
-  font-size: 62.5%;
   font-style: Arial;
 }
-#logo{
+/* #logo{
   width: 100%;
   height: 60px;
   top: 0;
@@ -15,9 +14,9 @@ body{
   text-align: center;
   z-index: 999;
   background-color: rgb(20, 9, 70);
-}
+} */
 
-  .animation-box {
+  /* .animation-box {
     width: 75%;
     height: 27.5rem;
     margin: 0 auto;
@@ -45,8 +44,17 @@ body{
     100% {
       opacity: 0%;
     }
+  } */
+  .textbox{
+    font-size: 36px;
+    font-weight: bold;
+    margin: auto;
+    /* position: absolute; */
+    color: #F0A3BE;
+    text-align: center;
+    display: none;
   }
-  .one-text {
+  /* .one-text {
     font-size: 3.4rem;
     position: absolute;
     opacity: 0;
@@ -84,4 +92,4 @@ body{
     animation-name: fadeInOut;
     animation-delay: 28.5s;
     animation-duration: 9s;
-  }
+  } */
