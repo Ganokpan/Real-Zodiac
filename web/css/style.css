@@ -26,7 +26,7 @@ body{
 
 .info{
   width: 1000px;
-  height: 70vh;
+  height: 80vh;
   position: absolute;
   left: 50%;
   margin-left: -500px;
@@ -34,7 +34,6 @@ body{
   margin-top: -40vh;
 }
 .image{
-  /* 400*505 px */
   width: 40%;
   height: 100%;
   background: red;
