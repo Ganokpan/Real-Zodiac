@@ -301,8 +301,12 @@
       <div id="stars2"></div>
       <div class="orb"></div>
       <div id="d01" class="dialogue" style="opacity: 0.3;">นี่...</div>
-      <div id="d02" class="dialogue" style="opacity: 0.6;">เธอที่อยู่หลังหน้าจอน่ะ</div>
-      <div id="d03" class="dialogue">ได้ยินฉันรึเปล่า?</div>
+      <div id="d02" class="dialogue" style="opacity: 0.6;">เธอที่อยู่อีกฟากของจอน่ะ</div>
+      <div id="d03" class="dialogue">เห็นฉันรึเปล่า?</div>
+      <div id="d04" class="dialogue">ก่อนหน้านี้ที่เห็นข้อมูลของแต่ละราศีเนี่ย...</div>
+      <div id="d05" class="dialogue">จะใช่ราศีจริงๆของเธอรึเปล่านะ?</div>
+      <div id="d06" class="dialogue">ถ้าอยากรู้ล่ะก็ตามฉันมาสิ</div>
+      <button class="btn_real">Discovering your real zodiac</button>
       </div>
     </section>
     <script>
@@ -332,7 +336,7 @@
         var wh = $(window).height();  
         var sh = $('body').prop("scrollHeight");
         $('html, body').stop().animate({scrollTop: sh-wh}, 10);
-        $('body').addClass('stop-scrolling');
+        // $('body').addClass('stop-scrolling');
         $(".orb").fadeOut(100);
         $(".flash").fadeIn(100);
         $(".flash").fadeOut(1500);
@@ -343,6 +347,18 @@
         $("#d02").delay(1000).fadeOut(3000);
         $("#d03").delay(17000).fadeIn(3000);
         $("#d03").delay(1000).fadeOut(3000);
+        $("#d04").delay(24000).fadeIn(3000);
+        $("#d04").delay(1000).fadeOut(3000);
+        $("#d05").delay(31000).fadeIn(3000);
+        $("#d05").delay(1000).fadeOut(3000);
+        $("#d06").delay(38000).fadeIn(3000);
+        $("#d06").delay(1000).fadeOut(3000);
+        $(".btn_real").delay(45000).fadeIn(3000);
+      });
+
+      // Link to next page
+      $(".btn_real").click(function() {
+        window.location.href = 'check_real.html';
       });
     </script>
   </body>

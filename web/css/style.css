@@ -192,6 +192,17 @@ button:focus {
   width: 250px;
   height: 50px;
 }
+.btn_real {
+  width: 600px;
+  height: 150px;
+  font-size: 40px;
+  position: absolute;
+  left: 50%;
+  margin-left: -300px;
+  top: 65%;
+  margin-top: -80px;
+  display: none;
+}
 /* Buttons end here */
 
 /* mouse scrolling animation */
