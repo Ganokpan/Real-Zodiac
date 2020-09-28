@@ -35,10 +35,13 @@ body {
 }
 .image {
   width: 40%;
-  height: 100%;
-  background: red;
-  margin-right: 100px;
+  height: 40%;
+  margin: 50px;
   float: left;
+}
+img{
+  width: 300px;
+  height: 300px;
 }
 .text {
   width: 50%;
