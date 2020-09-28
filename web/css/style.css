@@ -102,14 +102,43 @@ body{
 /* Parallax end here*/
 
 /* The void */
-.void{
+/* .void{
   width: 100%;
   height: 2000px;
   position: relative;
   overflow: hidden;
   background: #fff;
-}
+} */
 /* The void end here */
+
+/* Buttons */
+button {
+  background: #000;
+  border: 5px solid #fff;
+  color: #fff;
+  padding: auto;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin: auto;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+button:hover {
+  background: #fff;
+  border: 5px solid #fff;
+  color: #000;
+}
+button:focus {
+  outline: 0;
+}
+.btn_fact{
+  width: 250px;
+  height: 50px;
+}
+/* Buttons end here */
 
 /* mouse scrolling animation */
 .icon-scroll,
