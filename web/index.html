@@ -11,6 +11,12 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="stylesheet" type="text/css" href="css/star.css" />
   <script src="script/jquery-3.5.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/3437ca9b77.js" crossorigin="anonymous"></script>
+  <style>
+    .btn_skip{
+      top: 28%;
+    }
+  </style>
 </head>
 
 <body>
@@ -18,6 +24,7 @@
     <div class="title">
       <p>The Real Zodiac</p>
       <div class="icon-scroll"></div>
+      <p style="font-family: 'Prompt', sans-serif; font-size: 30px; margin: 80px;">Scroll down</p>
     </div>
     <img src="img/mountain_r.png" class="pararight" />
     <img src="img/mountain_l.png" class="paraleft" />
@@ -439,13 +446,14 @@
     <div class="flash"></div>
     <div id="stars2"></div>
     <div class="orb"></div>
+    <a class="btn_skip" href="#" id="skip">Skip <i class="fas fa-step-forward"></i></a>
     <div id="d01" class="dialogue" style="opacity: 0.3;">นี่...</div>
     <div id="d02" class="dialogue" style="opacity: 0.6;">เธอที่อยู่อีกฟากของจอน่ะ</div>
     <div id="d03" class="dialogue">เห็นฉันรึเปล่า?</div>
     <div id="d04" class="dialogue">ก่อนหน้านี้ที่เห็นข้อมูลของแต่ละราศีเนี่ย...</div>
     <div id="d05" class="dialogue">จะใช่ราศีจริงๆของเธอรึเปล่านะ?</div>
     <div id="d06" class="dialogue">ถ้าอยากรู้ล่ะก็ตามฉันมาสิ</div>
-    <button class="btn_real">Discovering your real zodiac</button>
+    <button class="btn_real">Discover your real zodiac</button>
     </div>
   </section>
   <script>
@@ -470,6 +478,14 @@
       });
     });
 
+    // Skip Button
+    $("#skip").click(function (e) {
+        e.preventDefault();
+        $("#d01, #d02, #d03, #d04, #d05, #d06, .btn_real").stop(true, true).fadeOut(1000);
+        $(".btn_real").delay(1000).fadeIn(3000);
+        $("#skip").fadeOut(500);
+      });
+
     $(".orb").click(function () {
       // Force to bottom of the page
       var wh = $(window).height();
@@ -480,7 +496,7 @@
       $(".flash").fadeIn(100);
       $(".flash").fadeOut(1500);
       $("#stars2").css("display", "none");
-      $("#d01").delay(3000).fadeIn(3000);
+      $("#d01, #skip").delay(3000).fadeIn(3000);
       $("#d01").delay(1000).fadeOut(3000);
       $("#d02").delay(10000).fadeIn(3000);
       $("#d02").delay(1000).fadeOut(3000);

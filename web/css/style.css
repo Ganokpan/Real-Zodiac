@@ -164,6 +164,7 @@ body {
 }
 
 /* The void end here */
+
 /* Buttons*/
 button {
   background: rgba(255, 255, 255, 0);
@@ -204,6 +205,26 @@ button:focus {
 }
 /* Buttons end here */
 
+/* Skip button */
+.btn_skip{
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  margin: 20px;
+  right: 0%;
+  text-decoration: none;
+  opacity: .5;
+  transition: 0.3s;
+  display: none;
+}
+.btn_skip:hover{
+  text-decoration: none;
+  color: #fff;
+  opacity: 1;
+}
+/* Skip button end here*/
+
 /* mouse scrolling animation */
 .icon-scroll,
 .icon-scroll:before {
@@ -215,6 +236,7 @@ button:focus {
   height: 50px;
   border: 5px solid #fff;
   border-radius: 25px;
+  margin-left: -15px;
 }
 @media (max-width: 767px) {
   .icon-scroll {
