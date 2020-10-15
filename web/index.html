@@ -11,20 +11,42 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="stylesheet" type="text/css" href="css/star.css" />
   <script src="script/jquery-3.5.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/3437ca9b77.js" crossorigin="anonymous"></script>
+  <style>
+    .btn_skip{
+      top: 28%;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="navbutt">
+    <a href="#aries">Aries</a>
+    <a href="#taurus">Taurus</a>
+    <a href="#gemini">Gemini</a>
+    <a href="#cancer">Cancer</a>
+    <a href="#leo">Leo</a>
+    <a href="#virgo">Virgo</a>
+    <a href="#libra">Libra</a>
+    <a href="#scorpio">Scorpio</a>
+    <a href="#sagittarius">Sagittarius</a>
+    <a href="#capricorn">Capricorn</a>
+    <a href="#aquarius">Aquarius</a>
+    <a href="#pisces">Pisces</a>
+    <a href="#" id="bot">???</a>
+  </div>
   <section class="zoom">
     <div class="title">
       <p>The Real Zodiac</p>
       <div class="icon-scroll"></div>
+      <p style="font-family: 'Prompt', sans-serif; font-size: 30px; margin: 80px;">Scroll down</p>
     </div>
     <img src="img/mars1.png" class="pararight">
     <img src="img/mars.png" class="paraleft">
   </section>
   <section class="content">
     <!-- Aries -->
-    <div class="zodiac aries">
+    <div class="zodiac" id="aries">
       <div class="info">
         <div class="image">
           <img src="img/zodiac_signs/aries.png" style="width: 300px;height: 300px;">
@@ -59,7 +81,7 @@
       </div>
     </div>
     <!-- Taurus -->
-    <div class="zodiac taurus">
+    <div class="zodiac" id="taurus">
       <div class="info">
         <div class="image">
           <img src="img/zodiac_signs/taurus.png" style="width: 300px;height: 300px;">
@@ -95,7 +117,7 @@
       </div>
     </div>
     <!-- Gemini -->
-    <div class="zodiac gemini">
+    <div class="zodiac" id="gemini">
       <div class="info">
         <div class="image">
           <img src="img/zodiac_signs/gemini.png" style="width: 300px;height: 300px;">
@@ -127,7 +149,7 @@
       </div>
     </div>
     <!-- Cancer -->
-    <div class="zodiac cancer">
+    <div class="zodiac" id="cancer">
       <div class="info">
         <div class="image">
           <img src="img/zodiac_signs/cancer.png" style="width: 300px;height: 300px;">
@@ -162,7 +184,7 @@
       </div>
     </div>
     <!-- Leo -->
-    <div class="zodiac leo">
+    <div class="zodiac" id="leo">
       <div class="info">
         <div class="image">
           <img src="img/zodiac_signs/leo.png" style="width: 300px;height: 300px;">
@@ -193,7 +215,7 @@
       </div>
     </div>
     <!-- Virgo -->
-    <div class="zodiac virgo">
+    <div class="zodiac" id="virgo">
       <div class="info">
         <div class="image">
           <img src="img/zodiac_signs/virgo.png" style="width: 300px;height: 300px;">
@@ -227,7 +249,7 @@
       </div>
     </div>
     <!-- Libra -->
-    <div class="zodiac libra">
+    <div class="zodiac" id="libra">
       <div class="info">
         <div class="image">
           <img src="img/zodiac_signs/libra.png" style="width: 300px;height: 300px;">
@@ -260,7 +282,7 @@
       </div>
     </div>
     <!-- Scorpio -->
-    <div class="zodiac scorpio">
+    <div class="zodiac" id="scorpio">
       <div class="info">
         <div class="image">
           <img src="img/zodiac_signs/scorpio.png" style="width: 300px;height: 300px;">
@@ -293,7 +315,7 @@
       </div>
     </div>
     <!-- Sagittarius -->
-    <div class="zodiac sagittarius">
+    <div class="zodiac" id="sagittarius">
       <div class="info">
         <div class="image">
           <img src="img/zodiac_signs/sagittarius.png" style="width: 300px;height: 300px;">
@@ -327,7 +349,7 @@
       </div>
     </div>
     <!-- Capricorn -->
-    <div class="zodiac capricorn">
+    <div class="zodiac" id="capricorn">
       <div class="info">
         <div class="image">
           <img src="img/zodiac_signs/capricorn.png" style="width: 300px;height: 300px;">
@@ -367,7 +389,7 @@
       </div>
     </div>
     <!-- Aquarius -->
-    <div class="zodiac aquarius">
+    <div class="zodiac" id="aquarius">
       <div class="info">
         <div class="image">
           <img src="img/zodiac_signs/aquarius.png" style="width: 300px;height: 300px;">
@@ -401,7 +423,7 @@
       </div>
     </div>
     <!-- Pisces -->
-    <div class="zodiac pisces">
+    <div class="zodiac" id="pisces">
       <div class="info">
         <div class="image">
           <img src="img/zodiac_signs/pisces.png" style="width: 300px;height: 300px;">
@@ -438,14 +460,15 @@
   <section class="void">
     <div class="flash"></div>
     <div id="stars2"></div>
-    <div class="orb"></div>
+    <div class="orb" id="orb"></div>
+    <a class="btn_skip" href="#" id="skip">Skip <i class="fas fa-step-forward"></i></a>
     <div id="d01" class="dialogue" style="opacity: 0.3;">นี่...</div>
     <div id="d02" class="dialogue" style="opacity: 0.6;">เธอที่อยู่อีกฟากของจอน่ะ</div>
     <div id="d03" class="dialogue">เห็นฉันรึเปล่า?</div>
     <div id="d04" class="dialogue">ก่อนหน้านี้ที่เห็นข้อมูลของแต่ละราศีเนี่ย...</div>
     <div id="d05" class="dialogue">จะใช่ราศีจริงๆของเธอรึเปล่านะ?</div>
     <div id="d06" class="dialogue">ถ้าอยากรู้ล่ะก็ตามฉันมาสิ</div>
-    <button class="btn_real">Discovering your real zodiac</button>
+    <button class="btn_real">Discover your real zodiac</button>
     </div>
   </section>
   <script>
@@ -470,17 +493,25 @@
       });
     });
 
+    // Skip Button
+    $("#skip").click(function (e) {
+        e.preventDefault();
+        $("#d01, #d02, #d03, #d04, #d05, #d06, #skip, .btn_real").stop(true, true).fadeOut(1000);
+        $(".btn_real").delay(1000).fadeIn(3000);
+        $("#skip").fadeOut(500);
+      });
+
+    var wh = $(window).height();
+    var sh = $('body').prop("scrollHeight");
     $(".orb").click(function () {
-      // Force to bottom of the page
-      var wh = $(window).height();
-      var sh = $('body').prop("scrollHeight");
-      $('html, body').stop().animate({ scrollTop: sh - wh }, 10);
-      // $('body').addClass('stop-scrolling');
+      $('html, body').stop().animate({ scrollTop: sh - wh }, 10);// Force to bottom of the page
+      $('body').addClass('stop-scrolling'); //Disable scrolling
       $(".orb").fadeOut(100);
       $(".flash").fadeIn(100);
       $(".flash").fadeOut(1500);
       $("#stars2").css("display", "none");
-      $("#d01").delay(3000).fadeIn(3000);
+      $(".navbutt").css("display", "none");
+      $("#d01, #skip").delay(3000).fadeIn(3000);
       $("#d01").delay(1000).fadeOut(3000);
       $("#d02").delay(10000).fadeIn(3000);
       $("#d02").delay(1000).fadeOut(3000);
@@ -492,15 +523,18 @@
       $("#d05").delay(1000).fadeOut(3000);
       $("#d06").delay(38000).fadeIn(3000);
       $("#d06").delay(1000).fadeOut(3000);
+      $("#skip").delay(36000).fadeOut(3000);
       $(".btn_real").delay(45000).fadeIn(3000);
+    });
+
+    $("#bot").click(function () {
+      $('html, body').stop().animate({ scrollTop: sh - wh }, 10);
     });
 
     // Link to next page
     $(".btn_real").click(function () {
       window.location.href = 'check_real.html';
     });
-
-
 
     // Legendary
     $(".popup-btn").click(function () {
@@ -512,7 +546,6 @@
       $(".popup").fadeOut();
     });
     
-
   </script>
 </body>
 

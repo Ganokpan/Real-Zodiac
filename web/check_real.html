@@ -14,6 +14,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="script/jquery-3.5.1.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/3437ca9b77.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
       body {
         background-image: url("img/bg_main.png");
@@ -34,16 +38,10 @@
   </head>
 
   <body>
-    <!-- เนื้อหา -->
-    <!-- <div id="wrapper"> -->
-    <!-- <div
-        class="section"
-        style="
-          background-image: url('img/bg_main.png');
-          background-size: 100% 100%;
-        "
-      > -->
-    <!-- คำเชิญชวน -->
+    <!-- Text -->
+    <a class="btn_skip" href="#" id="skip"
+      >Skip <i class="fas fa-step-forward"></i
+    ></a>
     <div id="t1" class="textbox">สวัสดี เธอสนใจเรื่องราศีสินะ</div>
     <div id="t2" class="textbox">เธอเกิดราศีอะไร</div>
     <div id="t3" class="textbox">แน่ใจหรอ... ว่าราศีนี้จริงๆ</div>
@@ -53,14 +51,19 @@
       <div>insert your birthday here</div>
       <button onclick="first_submit()">Press</button>
     </div>
-    <!-- </div>
-    </div> -->
+
     <script>
-      // new fullpage("#wrapper", {
-      //   autoScrolling: true,
-      //   slidesNavigation: true,
-      // });
+      // Skip Button
+      $("#skip").click(function (e) {
+        e.preventDefault();
+        $("#t1, #t2, #t3, #t4, #t5, #skip").stop(true, true).fadeOut(1000);
+        $("#t5").delay(1000).fadeIn(3000);
+        $("#skip").fadeOut(500);
+      });
+
+      // Fade in texts
       $(document).ready(function () {
+        $("#skip").fadeIn(500);
         $("#t1").fadeIn(3000);
         $("#t1").delay(1000).fadeOut(3000);
         $("#t2").delay(7000).fadeIn(3000);
@@ -69,6 +72,7 @@
         $("#t3").delay(1000).fadeOut(3000);
         $("#t4").delay(21000).fadeIn(3000);
         $("#t4").delay(1000).fadeOut(3000);
+        $("#skip").delay(24000).fadeOut(3000);
         $("#t5").delay(28000).fadeIn(3000);
       });
     </script>
