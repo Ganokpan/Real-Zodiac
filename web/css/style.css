@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar{
@@ -47,7 +48,8 @@ body {
   display:block;	
   width: 0%;
   height: 10%;
-  right: 0px;
+  right: 30%;
+  z-index: -1;
 }
 .meteorRB {
   position: absolute;
@@ -57,6 +59,7 @@ body {
   bottom: 10%;
   right: 0px;
   margin-bottom: -120px;
+  z-index: -1;
 }
 .meteorLT {
   position: absolute;
@@ -65,7 +68,8 @@ body {
   height: 10%;
   left: 0%;
   margin-left: -170px;
-  top: 0%;  
+  top: 0%;
+  z-index: -1;
 }
 .meteorLB {
   position: absolute;
@@ -76,6 +80,7 @@ body {
   margin-left: -50px;
   bottom: 0%;
   margin-bottom: 5px;
+  z-index: -1;
 }
 .text {
   width: 50%;
@@ -97,6 +102,26 @@ body {
 .day_range {
   font-size: 24px;
 }
+.error {
+  color: hsl(0, 50%, 50%);
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  display: none;
+}
+
+input {
+  margin: 20px;
+}
+
+#darken{
+  width: 100vw;
+  height: 100vh;
+  background: hsla(0, 50%, 0%, .7);
+  z-index: -1;
+  position: absolute;
+}
+
 /* Nav */
 .navbutt{
   width: 100%;
@@ -278,6 +303,7 @@ button:focus {
   opacity: .5;
   transition: 0.3s;
   display: none;
+  z-index: 10000;
 }
 .btn_skip:hover{
   text-decoration: none;
@@ -341,14 +367,15 @@ hr {
 h3{
   color: #000;
 }
-.open_popup{
+/* .open_popup{
   background:rgb(243, 243, 243);
   border:none;
   padding:5px 15px;
   color:rgb(2, 1, 1);
-}
+} */
 .popup_body{
   display:none;
+  z-index: 20000;
   position:fixed;
   top:0;left:0;right:0;bottom:0;
   -webkit-transition: 300ms;
@@ -359,6 +386,7 @@ h3{
 }
 .popup_body_show{
   display:block;
+  z-index: 20000;
   -webkit-transition: 150ms;
     -moz-transition: 150ms;
     -o-transition: 150ms;
@@ -366,12 +394,14 @@ h3{
     transition: 300ms;
 }
 .popup_back{
+  z-index: 20000;
   background: rgba(0,0,0,0.4);
   position: fixed;
   left:0;right:0;top:0;bottom:0;
 }
 .popup_contain{
   position:relative;
+  z-index: 20000;
   background:rgb(170, 173, 180);
   min-width:150px;
   max-width:80%;
@@ -381,6 +411,7 @@ h3{
 }
 .popup_close{
   background:red;
+  z-index: 20000;
   padding:10px 20px 10px;
   position: absolute;
   right:-10px;
@@ -388,7 +419,7 @@ h3{
   color: #fff;
   border-radius: 50%;
 }
-button {
+/* button {
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -409,5 +440,5 @@ button:active {
   background-color: #c4dbee;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}
+} */
 /* Popup end */

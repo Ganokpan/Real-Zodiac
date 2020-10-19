@@ -38,32 +38,54 @@
   </head>
 
   <body>
-    <!-- Text -->
-    <a class="btn_skip" href="#" id="skip"
+    <div id="darken"></div>
+    <!-- Text Part 1 -->
+    <a class="btn_skip" href="#" id="skip01"
       >Skip <i class="fas fa-step-forward"></i
     ></a>
-    <div id="t1" class="textbox">สวัสดี เธอสนใจเรื่องราศีสินะ</div>
-    <div id="t2" class="textbox">เธอเกิดราศีอะไร</div>
-    <div id="t3" class="textbox">แน่ใจหรอ... ว่าราศีนี้จริงๆ</div>
-    <div id="t4" class="textbox">เราช่วยเธอได้นะ</div>
+    <div id="t1" class="textbox">ไง! ตามมาแล้วเหรอ</div>
+    <div id="t2" class="textbox">ดูท่าทางแล้วเธอคงอยากจะรู้จริงๆสินะ</div>
+    <div id="t3" class="textbox">ฉันจะช่วยคำนวณราศีจริงของเธอเอง</div>
+    <div id="t4" class="textbox">แต่ก่อนอื่นเลย</div>
     <div id="t5" class="textbox">
-      <p>ขอวันเกิดหน่อยสิ</p>
-      <div>insert your birthday here</div>
-      <button onclick="first_submit()">Press</button>
+      <p>ฉันขอวันเกิดของเธอหน่อยสิ</p>
+      <input id="date_input" type="date" />
+      <p class="error" id="error">เธอลืมใส่วันเกิดหรือใส่วันจากอนาคตรึเปล่า?</p>
+      <button id="first_submit">Next</button>
+    </div>
+
+    <!-- Text Part 2 -->
+    <div id="t6" class="textbox">
+      <p>ราศีของเธอคือ...</p>
+      <input id="date_input" type="date" />
+      <p class="error" id="error">เธอลืมใส่วันเกิดหรือใส่วันจากอนาคตรึเปล่า?</p>
+      <button id="first_submit">Next</button>
     </div>
 
     <script>
+      // Variables
+      // Today Date
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, "0");
+      var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+      var yyyy = today.getFullYear();
+      today = yyyy + "-" + mm + "-" + dd;
+
+      // Birthday
+      var b_day;
+      var b_day_mmdd;
+
       // Skip Button
-      $("#skip").click(function (e) {
+      $("#skip01").click(function (e) {
         e.preventDefault();
-        $("#t1, #t2, #t3, #t4, #t5, #skip").stop(true, true).fadeOut(1000);
+        $("#t1, #t2, #t3, #t4, #t5, #skip01, #darken").stop(true, true).fadeOut(1000);
         $("#t5").delay(1000).fadeIn(3000);
-        $("#skip").fadeOut(500);
+        $("#skip01, #darken").fadeOut(500);
       });
 
       // Fade in texts
       $(document).ready(function () {
-        $("#skip").fadeIn(500);
+        $("#skip01").fadeIn(500);
         $("#t1").fadeIn(3000);
         $("#t1").delay(1000).fadeOut(3000);
         $("#t2").delay(7000).fadeIn(3000);
@@ -72,8 +94,26 @@
         $("#t3").delay(1000).fadeOut(3000);
         $("#t4").delay(21000).fadeIn(3000);
         $("#t4").delay(1000).fadeOut(3000);
-        $("#skip").delay(24000).fadeOut(3000);
+        $("#skip01, #darken").delay(24000).fadeOut(3000);
         $("#t5").delay(28000).fadeIn(3000);
+      });
+
+      // First Submit
+      $("#first_submit").click(function () {
+        // Birthday
+        var b_day_input = $("#date_input").val();
+        b_day = new Date(b_day_input);
+        var b_dd = String(b_day.getDate()).padStart(2, "0");
+        var b_mm = String(b_day.getMonth() + 1).padStart(2, "0"); //January is 0!
+        var b_yyyy = b_day.getFullYear();
+        b_day = b_yyyy + "-" + b_mm + "-" + b_dd;
+        b_day_mmdd = b_mm + "-" + b_dd;
+        if (b_day > today) {
+          $("#error").fadeIn(500);
+          $("#error").delay(3500).fadeOut(500);
+        } else if (b_day_mmdd >= "03-22" && b_day_mmdd <= "04-21") {
+          document.getElementById("res").innerHTML = "aries";
+        }
       });
     </script>
   </body>
