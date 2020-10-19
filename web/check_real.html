@@ -57,9 +57,57 @@
     <!-- Text Part 2 -->
     <div id="t6" class="textbox">
       <p>ราศีของเธอคือ...</p>
-      <input id="date_input" type="date" />
-      <p class="error" id="error">เธอลืมใส่วันเกิดหรือใส่วันจากอนาคตรึเปล่า?</p>
-      <button id="first_submit">Next</button>
+      <div id="t6-01" style="display: none">
+        <img src="รูป3/เมษ.PNG" class="zodiac_result" />
+        <p>ราศีเมษ</p>
+      </div>
+      <div id="t6-02" style="display: none">
+        <img src="รูป3/พฤษภ.PNG" class="zodiac_result" />
+        <p>ราศีพฤษภ</p>
+      </div>
+      <div id="t6-03" style="display: none">
+        <img src="รูป3/เมถุน.PNG" class="zodiac_result" />
+        <p>ราศีเมถุน</p>
+      </div>
+      <div id="t6-04" style="display: none">
+        <img src="รูป3/กรกฎ.PNG" class="zodiac_result" />
+        <p>ราศีกรกฎ</p>
+      </div>
+      <div id="t6-05" style="display: none">
+        <img src="รูป3/สิงค์.PNG" class="zodiac_result" />
+        <p>ราศีสิงห์</p>
+      </div>
+      <div id="t6-06" style="display: none">
+        <img src="รูป3/กันย์.PNG" class="zodiac_result" />
+        <p>ราศีกันย์</p>
+      </div>
+      <div id="t6-07" style="display: none">
+        <img src="รูป3/ตุลย์.PNG" class="zodiac_result" />
+        <p>ราศีตุลย์</p>
+      </div>
+      <div id="t6-08" style="display: none">
+        <img src="รูป3/พิจิก.PNG" class="zodiac_result" />
+        <p>ราศีพิจิก</p>
+      </div>
+      <div id="t6-09" style="display: none">
+        <img src="รูป3/ธนู.PNG" class="zodiac_result" />
+        <p>ราศีธนู</p>
+      </div>
+      <div id="t6-10" style="display: none">
+        <img src="รูป3/มังกร.PNG" class="zodiac_result" />
+        <p>ราศีมังกร</p>
+      </div>
+      <div id="t6-11" style="display: none">
+        <img src="รูป3/กุมภ์.PNG" class="zodiac_result" />
+        <p>ราศีกุมภ์</p>
+      </div>
+      <div id="t6-12" style="display: none">
+        <img src="รูป3/มีน.PNG" class="zodiac_result" />
+        <p>ราศีมีน</p>
+      </div>
+      <p id="t6-13" style="display: none; font-size: 18px">
+        ถ้าอิงแค่ตามวันเกิดอะนะ...
+      </p>
     </div>
 
     <script>
@@ -78,7 +126,9 @@
       // Skip Button
       $("#skip01").click(function (e) {
         e.preventDefault();
-        $("#t1, #t2, #t3, #t4, #t5, #skip01, #darken").stop(true, true).fadeOut(1000);
+        $("#t1, #t2, #t3, #t4, #t5, #skip01, #darken")
+          .stop(true, true)
+          .fadeOut(1000);
         $("#t5").delay(1000).fadeIn(3000);
         $("#skip01, #darken").fadeOut(500);
       });
@@ -111,8 +161,39 @@
         if (b_day > today) {
           $("#error").fadeIn(500);
           $("#error").delay(3500).fadeOut(500);
-        } else if (b_day_mmdd >= "03-22" && b_day_mmdd <= "04-21") {
-          document.getElementById("res").innerHTML = "aries";
+        } else {
+          $("#t5").fadeOut(3000);
+          $("#darken").fadeIn(3000);
+          $("#t6").delay(3000).fadeIn(3000);
+          if (b_day_mmdd >= "03-22" && b_day_mmdd <= "04-21") {
+            $("#t6-01").delay(7000).fadeIn(3000);
+          } else if (b_day_mmdd >= "04-22" && b_day_mmdd <= "05-21") {
+            $("#t6-02").delay(7000).fadeIn(3000);
+          } else if (b_day_mmdd >= "05-22" && b_day_mmdd <= "06-21") {
+            $("#t6-03").delay(7000).fadeIn(3000);
+          } else if (b_day_mmdd >= "06-22" && b_day_mmdd <= "07-21") {
+            $("#t6-04").delay(7000).fadeIn(3000);
+          } else if (b_day_mmdd >= "07-22" && b_day_mmdd <= "08-21") {
+            $("#t6-05").delay(7000).fadeIn(3000);
+          } else if (b_day_mmdd >= "08-22" && b_day_mmdd <= "09-21") {
+            $("#t6-06").delay(7000).fadeIn(3000);
+          } else if (b_day_mmdd >= "09-22" && b_day_mmdd <= "10-21") {
+            $("#t6-07").delay(7000).fadeIn(3000);
+          } else if (b_day_mmdd >= "10-22" && b_day_mmdd <= "11-21") {
+            $("#t6-08").delay(7000).fadeIn(3000);
+          } else if (b_day_mmdd >= "11-22" && b_day_mmdd <= "12-21") {
+            $("#t6-09").delay(7000).fadeIn(3000);
+          } else if (
+            (b_day_mmdd >= "12-22" && b_day_mmdd <= "12-31") ||
+            (b_day_mmdd >= "01-01" && b_day_mmdd <= "01-20")
+          ) {
+            $("#t6-10").delay(7000).fadeIn(3000);
+          } else if (b_day_mmdd >= "01-21" && b_day_mmdd <= "02-20") {
+            $("#t6-11").delay(7000).fadeIn(3000);
+          } else if (b_day_mmdd >= "02-21" && b_day_mmdd <= "03-21") {
+            $("#t6-12").delay(7000).fadeIn(3000);
+          }
+          $("#t6-13").delay(11000).fadeIn(3000);
         }
       });
     </script>

@@ -122,6 +122,11 @@ input {
   position: absolute;
 }
 
+.zodiac_result{
+  width: 400px;
+  height: 300px;
+}
+
 /* Nav */
 .navbutt{
   width: 100%;
