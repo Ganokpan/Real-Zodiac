@@ -207,6 +207,7 @@
         <img src="รูป3/มีน.PNG" class="zodiac_result" />
         <p>ราศีมีน</p>
       </div>
+      <button id="btn_home">Back to homepage</button>
     </div>
 
     <script>
@@ -230,58 +231,6 @@
 
       // Time
       var time; // Format 24 Hours
-
-      // Skip Button
-      $("#skip01").click(function (e) {
-        e.preventDefault();
-        $("#t1, #t2, #t3, #t4, #t5, #skip01, #darken")
-          .stop(true, true)
-          .fadeOut(1000);
-        $("#t5").delay(1000).fadeIn(3000);
-        $("#skip01, #darken").fadeOut(500);
-      });
-      $("#skip02").click(function (e) {
-        e.preventDefault();
-        $("#t6, #t7, #t8, #t9, #t10, #t11, #t12, #skip02, #darken")
-          .stop(true, true)
-          .fadeOut(1000);
-        $("#t12").delay(1000).fadeIn(3000);
-        $("#skip02, #darken").fadeOut(500);
-      });
-      $("#skip03").click(function (e) {
-        e.preventDefault();
-        $("#t12, #t13-1, #t13-2, #t14, #t15, #t16, #t17, #t18, #t19, #skip03")
-          .stop(true, true)
-          .fadeOut(1000);
-        calculate(start, time);
-        $("#skip03").fadeOut(500);
-        $("#t19").delay(1000).fadeIn(3000);
-        if (cal == 1) {
-          $("#t19-01").delay(7000).fadeIn(3000);
-        } else if (cal == 2) {
-          $("#t19-02").delay(7000).fadeIn(3000);
-        } else if (cal == 3) {
-          $("#t19-03").delay(7000).fadeIn(3000);
-        } else if (cal == 4) {
-          $("#t19-04").delay(7000).fadeIn(3000);
-        } else if (cal == 5) {
-          $("#t19-05").delay(7000).fadeIn(3000);
-        } else if (cal == 6) {
-          $("#t19-06").delay(7000).fadeIn(3000);
-        } else if (cal == 7) {
-          $("#t19-07").delay(7000).fadeIn(3000);
-        } else if (cal == 8) {
-          $("#t19-08").delay(7000).fadeIn(3000);
-        } else if (cal == 9) {
-          $("#t19-09").delay(7000).fadeIn(3000);
-        } else if (cal == 10) {
-          $("#t19-10").delay(7000).fadeIn(3000);
-        } else if (cal == 11) {
-          $("#t19-11").delay(7000).fadeIn(3000);
-        } else if (cal == 12) {
-          $("#t19-12").delay(7000).fadeIn(3000);
-        }
-      });
 
       // Fade in texts
       $(document).ready(function () {
@@ -379,7 +328,6 @@
           $("#error02").fadeIn(500);
           $("#error02").delay(3500).fadeOut(500);
         } else {
-          $("#skip03").fadeIn(500);
           $("#t12").fadeOut(3000);
           $("#darken").fadeIn(3000);
           $("#t13-1").delay(3000).fadeIn(3000);
@@ -390,7 +338,6 @@
       // Forgot Time
       $("#forgot").click(function () {
         time = "06:00";
-        $("#skip03").fadeIn(500);
         $("#t12").fadeOut(3000);
         $("#darken").fadeIn(3000);
         $("#t13-2").delay(3000).fadeIn(3000);
@@ -400,7 +347,7 @@
       // Part 3
       function partThree() {
         calculate(start, time);
-        $("#t14").delay(10000).fadeIn(3000);
+        $("#t14, #skip03").delay(10000).fadeIn(3000);
         $("#t14").delay(1000).fadeOut(3000);
         $("#t15").delay(17000).fadeIn(3000);
         $("#t15").delay(1000).fadeOut(3000);
@@ -410,6 +357,7 @@
         $("#t17").delay(1000).fadeOut(3000);
         $("#t18").delay(38000).fadeIn(3000);
         $("#t18").delay(1000).fadeOut(3000);
+        $("#skip03").delay(30000).fadeOut(3000);
         $("#t19").delay(45000).fadeIn(3000);
         if (cal == 1) {
           $("#t19-01").delay(49000).fadeIn(3000);
@@ -436,6 +384,7 @@
         } else if (cal == 12) {
           $("#t19-12").delay(49000).fadeIn(3000);
         }
+        $("#btn_home").delay(55000).fadeIn(3000);
       }
 
       // Calculate
@@ -469,7 +418,63 @@
         if (cal >= 13) cal -= 12;
         return cal;
       }
-      
+
+      // Skip Button
+      $("#skip01").click(function (e) {
+        e.preventDefault();
+        $("#t1, #t2, #t3, #t4, #t5, #skip01, #darken")
+          .stop(true, true)
+          .fadeOut(1000);
+        $("#t5").delay(1000).fadeIn(3000);
+        $("#skip01, #darken").fadeOut(500);
+      });
+      $("#skip02").click(function (e) {
+        e.preventDefault();
+        $("#t6, #t7, #t8, #t9, #t10, #t11, #t12, #skip02, #darken")
+          .stop(true, true)
+          .fadeOut(1000);
+        $("#t12").delay(1000).fadeIn(3000);
+        $("#skip02, #darken").fadeOut(500);
+      });
+      $("#skip03").click(function (e) {
+        e.preventDefault();
+        $("#t12, #t13-1, #t13-2, #t14, #t15, #t16, #t17, #t18, #t19, #skip03")
+          .stop(true, true)
+          .fadeOut(1000);
+        calculate(start, time);
+        alert(cal);
+        $("#skip03").fadeOut(500);
+        $("#t19").delay(1000).fadeIn(3000);
+        if (cal == 1) {
+          $("#t19-01").delay(7000).fadeIn(3000);
+        } else if (cal == 2) {
+          $("#t19-02").delay(7000).fadeIn(3000);
+        } else if (cal == 3) {
+          $("#t19-03").delay(7000).fadeIn(3000);
+        } else if (cal == 4) {
+          $("#t19-04").delay(7000).fadeIn(3000);
+        } else if (cal == 5) {
+          $("#t19-05").delay(7000).fadeIn(3000);
+        } else if (cal == 6) {
+          $("#t19-06").delay(7000).fadeIn(3000);
+        } else if (cal == 7) {
+          $("#t19-07").delay(7000).fadeIn(3000);
+        } else if (cal == 8) {
+          $("#t19-08").delay(7000).fadeIn(3000);
+        } else if (cal == 9) {
+          $("#t19-09").delay(7000).fadeIn(3000);
+        } else if (cal == 10) {
+          $("#t19-10").delay(7000).fadeIn(3000);
+        } else if (cal == 11) {
+          $("#t19-11").delay(7000).fadeIn(3000);
+        } else if (cal == 12) {
+          $("#t19-12").delay(7000).fadeIn(3000);
+        }
+      });
+
+      $("#btn_home").click(function () {
+        window.location.href = "index.html";
+      });
     </script>
   </body>
 </html>
