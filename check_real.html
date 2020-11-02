@@ -764,6 +764,8 @@
 
       $("#skip03").click(function (e) {
         e.preventDefault();
+        alert(cal);
+        alert(z_star);
         $(".textbox, .btn_skip").stop(true, true).fadeOut(1000);
         $("#skip03").fadeOut(500);
         $("#spinning, .box_cal, .sun").fadeIn(3000);
@@ -774,9 +776,9 @@
               .queue(function () {
                 $(".box_cal").css({ transform: "rotate(-1080deg)" });
               });
-            $("#spinning").delay(8000).fadeOut(3000);
-            $("#t19").delay(12000).fadeIn(3000);
-            $("#t19-01, #toLast").delay(15000).fadeIn(3000);
+            $("#spinning").delay(15000).fadeOut(3000);
+            $("#t19").delay(25000).fadeIn(3000);
+            $("#t19-01, #toLast").delay(28000).fadeIn(3000);
             break;
           case 2:
             $(".box_cal")
