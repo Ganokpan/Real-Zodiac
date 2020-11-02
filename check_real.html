@@ -48,6 +48,7 @@
     <a class="btn_skip" href="#" id="skip03"
       >Skip <i class="fas fa-step-forward"></i
     ></a>
+
     <!-- Text Part 1 -->
 
     <div id="t1" class="textbox">ไง! ตามมาแล้วเหรอ</div>
@@ -222,6 +223,63 @@
       <button id="toLast">ต่อไป</button>
     </div>
 
+    <!-- Last Part -->
+    <div id="t20" class="textbox">นอกจากนี้แล้ว</div>
+    <div id="t21" class="textbox">ฉันยังใช้เวลาเกิดของเธอ...</div>
+    <div id="t22" class="textbox">ระบุกลุ่มดาวที่อยู่บนจุดจอมฟ้า หรือเหนือหัวของเธอ ณ ตอนนั้นได้นะ</div>
+    <div id="t23" class="textbox">
+      <p>กลุ่มดาวที่จุดจอมฟ้า ณ ขณะนั้นคือ...</p>
+      <div id="t23-01" style="display: none">
+        <img src="หมู่มวลดาวนับล้าน/Virgo.png" class="zodiac_result" />
+        <p>กลุ่มดาวราศีกันย์</p>
+      </div>
+      <div id="t23-02" style="display: none">
+        <img src="หมู่มวลดาวนับล้าน/Serpens.png" class="zodiac_result" />
+        <p>กลุ่มดาวงู</p>
+      </div>
+      <div id="t23-03" style="display: none">
+        <img src="หมู่มวลดาวนับล้าน/Ophiuchus.png" class="zodiac_result" />
+        <p>กลุ่มดาวคนแบกงู</p>
+      </div>
+      <div id="t23-04" style="display: none">
+        <img src="star_star/aquila.PNG" class="zodiac_result" />
+        <p>กลุ่มดาวนกอินทรี</p>
+      </div>
+      <div id="t23-05" style="display: none">
+        <img src="หมู่มวลดาวนับล้าน/Pegasus.png" class="zodiac_result" />
+        <p>กลุ่มดาวม้าบิน</p>
+      </div>
+      <div id="t23-06" style="display: none">
+        <img src="หมู่มวลดาวนับล้าน/Pisces.png" class="zodiac_result" />
+        <p>กลุ่มดาวราศีมีน</p>
+      </div>
+      <div id="t23-07" style="display: none">
+        <img src="star_star/aries.PNG" class="zodiac_result" />
+        <p>กลุ่มดาวราศีเมษ</p>
+      </div>
+      <div id="t23-08" style="display: none">
+        <img src="หมู่มวลดาวนับล้าน/Taurus.png" class="zodiac_result" />
+        <p>กลุ่มดาวราศีพฤษก</p>
+      </div>
+      <div id="t23-09" style="display: none">
+        <img src="หมู่มวลดาวนับล้าน/Orion.png" class="zodiac_result" />
+        <p>กลุ่มดาวนายพราน</p>
+      </div>
+      <div id="t23-10" style="display: none">
+        <img src="star_star/gemini.PNG" class="zodiac_result" />
+        <p>กลุ่มดาวราศีเมถุน</p>
+      </div>
+      <div id="t23-11" style="display: none">
+        <img src="star_star/cancer.PNG" class="zodiac_result" />
+        <p>กลุ่มดาวราศีกรกฎ</p>
+      </div>
+      <div id="t23-12" style="display: none">
+        <img src="star_star/leo.PNG" class="zodiac_result" />
+        <p>กลุ่มดาวราศีสิงห์</p>
+      </div>
+      <button id="btn_home">กลับสู่หน้าหลัก</button>
+    </div>
+
     <script>
       // Variables
       // Today Date
@@ -239,7 +297,7 @@
       var cal = 1;
 
       // Zenith
-      var z_star;
+      var z_star = 1;
 
       // Time
       var time; // Format 24 Hours
@@ -485,6 +543,143 @@
             break;
         }
       }
+
+      // Final Part
+      $("#toLast").click(function () {
+        $(".box_cal").css({ display: "none" });
+        $(".sun").css({ display: "none" });
+        $("#t19").fadeOut(3000);
+        $("#t20").delay(4000).fadeIn(3000);
+        $("#t20").delay(1000).fadeOut(3000);
+        $("#t21").delay(11000).fadeIn(3000);
+        $("#t21").delay(1000).fadeOut(3000);
+        $("#t22").delay(18000).fadeIn(3000);
+        $("#t22").delay(1000).fadeOut(3000);
+        $("#spinning").delay(25000).fadeIn(3000);
+        $(".box_zen").delay(28000).fadeIn(1500);
+        switch (z_star) {
+          case 1:
+            $(".box_zen")
+              .delay(1500)
+              .queue(function () {
+                $(".box_zen").css({ transform: "rotate(-1080deg)" });
+              });
+            $("#spinning").delay(10000).fadeOut(3000);
+            $("#t23").delay(40000).fadeIn(3000);
+            $("#t23-01, #btn_home").delay(43000).fadeIn(3000);
+            break;
+          case 2:
+            $(".box_zen")
+              .delay(1500)
+              .queue(function () {
+                $(".box_zen").css({ transform: "rotate(-1110deg)" });
+              });
+            $("#spinning").delay(10000).fadeOut(3000);
+            $("#t23").delay(40000).fadeIn(3000);
+            $("#t23-02, #btn_home").delay(43000).fadeIn(3000);
+            break;
+          case 3:
+            $(".box_zen")
+              .delay(1500)
+              .queue(function () {
+                $(".box_zen").css({ transform: "rotate(-1140deg)" });
+              });
+            $("#spinning").delay(10000).fadeOut(3000);
+            $("#t23").delay(40000).fadeIn(3000);
+            $("#t23-03, #btn_home").delay(43000).fadeIn(3000);
+            break;
+          case 4:
+            $(".box_zen")
+              .delay(1500)
+              .queue(function () {
+                $(".box_zen").css({ transform: "rotate(-1170deg)" });
+              });
+            $("#spinning").delay(10000).fadeOut(3000);
+            $("#t23").delay(40000).fadeIn(3000);
+            $("#t23-04, #btn_home").delay(43000).fadeIn(3000);
+            break;
+          case 5:
+            $(".box_zen")
+              .delay(1500)
+              .queue(function () {
+                $(".box_zen").css({ transform: "rotate(-1200deg)" });
+              });
+            $("#spinning").delay(10000).fadeOut(3000);
+            $("#t23").delay(40000).fadeIn(3000);
+            $("#t23-05, #btn_home").delay(43000).fadeIn(3000);
+            break;
+          case 6:
+            $(".box_zen")
+              .delay(1500)
+              .queue(function () {
+                $(".box_zen").css({ transform: "rotate(-1230deg)" });
+              });
+            $("#spinning").delay(10000).fadeOut(3000);
+            $("#t23").delay(40000).fadeIn(3000);
+            $("#t23-06, #btn_home").delay(43000).fadeIn(3000);
+            break;
+          case 7:
+            $(".box_zen")
+              .delay(1500)
+              .queue(function () {
+                $(".box_zen").css({ transform: "rotate(-1260deg)" });
+              });
+            $("#spinning").delay(10000).fadeOut(3000);
+            $("#t23").delay(40000).fadeIn(3000);
+            $("#t23-07, #btn_home").delay(43000).fadeIn(3000);
+            break;
+          case 8:
+            $(".box_zen")
+              .delay(1500)
+              .queue(function () {
+                $(".box_zen").css({ transform: "rotate(-1290deg)" });
+              });
+            $("#spinning").delay(10000).fadeOut(3000);
+            $("#t23").delay(40000).fadeIn(3000);
+            $("#t23-08, #btn_home").delay(43000).fadeIn(3000);
+            break;
+          case 9:
+            $(".box_zen")
+              .delay(1500)
+              .queue(function () {
+                $(".box_zen").css({ transform: "rotate(-1320deg)" });
+              });
+            $("#spinning").delay(10000).fadeOut(3000);
+            $("#t23").delay(40000).fadeIn(3000);
+            $("#t23-09, #btn_home").delay(43000).fadeIn(3000);
+            break;
+          case 10:
+            $(".box_zen")
+              .delay(1500)
+              .queue(function () {
+                $(".box_zen").css({ transform: "rotate(-1350deg)" });
+              });
+            $("#spinning").delay(10000).fadeOut(3000);
+            $("#t23").delay(40000).fadeIn(3000);
+            $("#t23-10, #btn_home").delay(43000).fadeIn(3000);
+            break;
+          case 11:
+            $(".box_zen")
+              .delay(1500)
+              .queue(function () {
+                $(".box_zen").css({ transform: "rotate(-1380deg)" });
+              });
+            $("#spinning").delay(10000).fadeOut(3000);
+            $("#t23").delay(40000).fadeIn(3000);
+            $("#t23-11, #btn_home").delay(43000).fadeIn(3000);
+            break;
+          case 12:
+            $(".box_zen")
+              .delay(1500)
+              .queue(function () {
+                $(".box_zen").css({ transform: "rotate(-1410deg)" });
+              });
+            $("#spinning").delay(10000).fadeOut(3000);
+            $("#t23").delay(40000).fadeIn(3000);
+            $("#t23-12, #btn_home").delay(43000).fadeIn(3000);
+            break;
+        }
+      });
 
       // Calculated Zodiac
       function real(b_day_mmdd) {
