@@ -434,12 +434,12 @@ h3 {
 /* Image Wheel */
 .box_cal{
   position: relative;
-  transition: 3s ease-in-out;
+  transition: 3s cubic-bezier(0, 0.33, 0.44, 1.44);
   display: none;
 }
 .box_zen{
   position: relative;
-  transition: 3s ease-in-out;
+  transition: 3s cubic-bezier(0, 0.33, 0.44, 1.44);
   display: none;
 }
 .wheel {
@@ -488,52 +488,6 @@ h3 {
   position: absolute;
   opacity: .7;
 }
-
-/* Rotate */
-.r1080 {
-  transform: rotate(300deg);
-  transition: 3s ease-in-out;
-}
-.r1110 {
-  transform: rotate(1110deg);
-}
-.r1140 {
-  transform: rotate(1140deg);
-}
-.r1170 {
-  transform: rotate(1170deg);
-}
-.r1200 {
-  transform: rotate(1200deg);
-}
-.r1230 {
-  transform: rotate(1230deg);
-}
-.r1260 {
-  transform: rotate(1260deg);
-}
-
-.r1290 {
-  transform: rotate(1290deg);
-}
-
-.r1320 {
-  transform: rotate(1320deg);
-}
-
-.r1350 {
-  transform: rotate(1350deg);
-}
-
-.r1380 {
-  transform: rotate(1380deg);
-}
-.r1410 {
-  transform: rotate(1410deg);
-}
-
-
-
 
 /* button {
   display: inline-block;
