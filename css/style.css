@@ -104,7 +104,7 @@ body {
 }
 .error {
   color: red;
-  -webkit-text-stroke: .2px black;
+  -webkit-text-stroke: 0.2px black;
   font-size: 24px;
   margin-top: 10px;
   margin-bottom: 30px;
@@ -432,14 +432,14 @@ h3 {
 }
 
 /* Image Wheel */
-.box_cal{
+.box_cal {
   position: relative;
-  transition: 3s cubic-bezier(0, 0.33, 0.44, 1.44);
+  transition: 3s cubic-bezier(0.42, 0, 0.46, 1.5);
   display: none;
 }
-.box_zen{
+.box_zen {
   position: relative;
-  transition: 3s cubic-bezier(0, 0.33, 0.44, 1.44);
+  transition: 3s cubic-bezier(0.42, 0, 0.46, 1.5);
   display: none;
 }
 .wheel {
@@ -465,7 +465,7 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.sun{
+.sun {
   z-index: 1;
   width: 60px;
   height: 60px;
@@ -481,14 +481,44 @@ h3 {
   display: none;
 }
 
-.arrow{
+.arrow {
   z-index: -5;
   transform: translate(-50%, -90%);
   text-shadow: 0 0 3px #000;
   position: absolute;
-  opacity: .7;
+  opacity: 0.7;
 }
 
+.float {
+  display: inline-block;
+}
+
+.result {
+  text-align: center;
+  background: chartreuse;
+  width: 150px;
+  height: 150px;
+}
+
+.sum_box {
+  font-size: 0.7em;
+  padding-bottom: 30px;
+}
+
+.sum_text{
+  padding-bottom: 5px;
+}
+
+.sum_res {
+  border: 5px hsla(0, 50%, 100%, .5) solid;
+  padding: 10px;
+  width: 350px;
+  margin: auto;
+}
+
+.greentext{
+  color: hsl(180, 50%, 50%);
+}
 /* button {
   display: inline-block;
   padding: 15px 25px;
